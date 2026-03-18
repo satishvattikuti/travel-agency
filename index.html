@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickChoice Travels | Your Dream Vacation Awaits</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">&#9992;</span> QuickChoice Travels
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#booking" class="nav-cta">Plan Your Trip</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+        </div>
+        <div class="container hero-content">
+            <span class="hero-badge">Award-Winning Travel Agency</span>
+            <h1>Discover the World<br><span class="hero-accent">One Adventure at a Time</span></h1>
+            <p class="hero-subtitle">From pristine beaches to bustling cities, we craft personalized travel experiences that create memories lasting a lifetime.</p>
+            <div class="hero-actions">
+                <a href="#booking" class="btn btn-primary btn-lg">Start Planning <span class="btn-arrow">&rarr;</span></a>
+                <a href="#destinations" class="btn btn-outline btn-lg">Explore Destinations</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Destinations</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Happy Travelers</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4.9</span>
+                    <span class="stat-label">Rating</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </header>
+
+    <!-- Popular Destinations -->
+    <section class="destinations" id="destinations">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Popular Destinations</span>
+                <h2>Where Will Your Next <span class="text-gradient">Adventure</span> Take You?</h2>
+                <p>Explore our most sought-after destinations, handpicked for unforgettable experiences.</p>
+            </div>
+            <div class="destinations-grid">
+                <div class="destination-card destination-large">
+                    <div class="destination-img" style="background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);">
+                        <div class="destination-emoji">&#127470;&#127481;</div>
+                    </div>
+                    <div class="destination-overlay">
+                        <span class="destination-tag">Trending</span>
+                        <h3>Santorini, Greece</h3>
+                        <p>Crystal-clear waters & white-washed villages</p>
+                        <span class="destination-price">From $1,299</span>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-img" style="background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);">
+                        <div class="destination-emoji">&#127471;&#127477;</div>
+                    </div>
+                    <div class="destination-overlay">
+                        <span class="destination-tag">Popular</span>
+                        <h3>Tokyo, Japan</h3>
+                        <p>Ancient temples & modern marvels</p>
+                        <span class="destination-price">From $1,599</span>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-img" style="background: linear-gradient(135deg, #7dd3fc 0%, #0ea5e9 100%);">
+                        <div class="destination-emoji">&#127474;&#127483;</div>
+                    </div>
+                    <div class="destination-overlay">
+                        <h3>Maldives</h3>
+                        <p>Paradise on Earth</p>
+                        <span class="destination-price">From $2,199</span>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-img" style="background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);">
+                        <div class="destination-emoji">&#127467;&#127479;</div>
+                    </div>
+                    <div class="destination-overlay">
+                        <h3>Paris, France</h3>
+                        <p>The City of Lights & Love</p>
+                        <span class="destination-price">From $999</span>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-img" style="background: linear-gradient(135deg, #bae6fd 0%, #0ea5e9 100%);">
+                        <div class="destination-emoji">&#127462;&#127482;</div>
+                    </div>
+                    <div class="destination-overlay">
+                        <h3>Bali, Indonesia</h3>
+                        <p>Tropical bliss & spiritual retreat</p>
+                        <span class="destination-price">From $1,099</span>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-img" style="background: linear-gradient(135deg, #e0f2fe 0%, #38bdf8 100%);">
+                        <div class="destination-emoji">&#127466;&#127468;</div>
+                    </div>
+                    <div class="destination-overlay">
+                        <h3>Dubai, UAE</h3>
+                        <p>Luxury & desert adventures</p>
+                        <span class="destination-price">From $1,399</span>
+                    </div>
+                </div>
+            </div>
+            <div class="destinations-cta">
+                <a href="#booking" class="btn btn-primary">Request a Custom Trip &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Book With Us -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why QuickChoice Travels</span>
+                <h2>Travel Planning <span class="text-gradient">Made Effortless</span></h2>
+                <p>We handle every detail so you can focus on making memories.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #0ea5e9, #0369a1);">&#128176;</div>
+                    <h3>Best Price Guarantee</h3>
+                    <p>We negotiate exclusive deals with airlines and hotels to get you the best rates, every time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #38bdf8, #0284c7);">&#127758;</div>
+                    <h3>Expert Travel Advisors</h3>
+                    <p>Our team has traveled to 100+ countries. We give advice based on real, personal experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #7dd3fc, #0ea5e9);">&#128222;</div>
+                    <h3>24/7 Support</h3>
+                    <p>From departure to return, our support team is always just a call or message away.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #bae6fd, #38bdf8);">&#9989;</div>
+                    <h3>Hassle-Free Booking</h3>
+                    <p>Submit your travel request and we take care of flights, hotels, transfers, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #0284c7, #38bdf8);">&#128737;</div>
+                    <h3>Travel Insurance</h3>
+                    <p>We partner with top insurers to protect your trip against unexpected cancellations or delays.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #e0f2fe, #7dd3fc);">&#127873;</div>
+                    <h3>Personalized Packages</h3>
+                    <p>No cookie-cutter trips. Every itinerary is custom-built around your preferences and budget.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Capture / Booking Form -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <div class="booking-wrapper">
+                <div class="booking-info">
+                    <span class="section-tag section-tag-light">Plan Your Trip</span>
+                    <h2>Ready for Your <span class="text-gradient-light">Dream Vacation?</span></h2>
+                    <p>Tell us where you want to go and we'll craft the perfect travel plan for you. No commitment required &mdash; just share your details and we'll get back to you with options and pricing.</p>
+                    <div class="booking-benefits">
+                        <div class="booking-benefit">
+                            <span class="benefit-check">&#10003;</span>
+                            <span>Free consultation &mdash; no obligations</span>
+                        </div>
+                        <div class="booking-benefit">
+                            <span class="benefit-check">&#10003;</span>
+                            <span>Response within 24 hours</span>
+                        </div>
+                        <div class="booking-benefit">
+                            <span class="benefit-check">&#10003;</span>
+                            <span>Personalized itinerary & pricing</span>
+                        </div>
+                        <div class="booking-benefit">
+                            <span class="benefit-check">&#10003;</span>
+                            <span>Expert travel advisor assigned to you</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-form-container">
+                    <form class="booking-form" id="bookingForm" novalidate>
+                        <h3 class="form-title">Your Travel Details</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="departureCity">Departure City *</label>
+                                <input type="text" id="departureCity" name="departureCity" placeholder="e.g., New York" required>
+                                <span class="form-error" id="departureCityError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="destination">Destination *</label>
+                                <input type="text" id="destination" name="destination" placeholder="e.g., Paris, France" required>
+                                <span class="form-error" id="destinationError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="travelClass">Travel Class *</label>
+                                <select id="travelClass" name="travelClass" required>
+                                    <option value="">Select class</option>
+                                    <option value="Economy">Economy</option>
+                                    <option value="Premium Economy">Premium Economy</option>
+                                    <option value="Business">Business</option>
+                                    <option value="First">First Class</option>
+                                </select>
+                                <span class="form-error" id="travelClassError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="travelers">Number of Travelers *</label>
+                                <input type="number" id="travelers" name="travelers" min="1" max="20" placeholder="e.g., 2" required>
+                                <span class="form-error" id="travelersError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="departDate">Departure Date *</label>
+                                <input type="date" id="departDate" name="departDate" required>
+                                <span class="form-error" id="departDateError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="returnDate">Return Date *</label>
+                                <input type="date" id="returnDate" name="returnDate" required>
+                                <span class="form-error" id="returnDateError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="flexibleDates">Flexible Dates?</label>
+                                <select id="flexibleDates" name="flexibleDates">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes (+/- a few days)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="budget">Budget (optional)</label>
+                                <input type="text" id="budget" name="budget" placeholder="e.g., $3,000 per person">
+                            </div>
+                        </div>
+
+                        <div class="form-divider"></div>
+                        <h4 class="form-subtitle">Contact Information</h4>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                                <span class="form-error" id="emailError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                                <span class="form-error" id="phoneError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-group-full">
+                            <label for="notes">Additional Notes or Requests</label>
+                            <textarea id="notes" name="notes" rows="3" placeholder="Tell us about any special requirements, preferred airlines, hotel preferences, activities you'd like to do..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-full" id="submitBtn">
+                            <span class="btn-text">Submit Travel Request</span>
+                            <span class="btn-loading" style="display:none;">Sending...</span>
+                        </button>
+                        <p class="form-disclaimer">By submitting, you agree to be contacted by our travel advisors. We respect your privacy and will never share your information.</p>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div class="form-success" id="formSuccess" style="display:none;">
+                        <div class="success-icon">&#10004;</div>
+                        <h3>Travel Request Submitted!</h3>
+                        <p>Thank you! One of our travel advisors will review your request and get back to you within 24 hours with personalized options and pricing.</p>
+                        <button class="btn btn-outline" id="newRequestBtn">Submit Another Request</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2>What Our Travelers <span class="text-gradient">Say</span></h2>
+                <p>Real stories from real travelers who chose QuickChoice Travels.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"QuickChoice Travels planned the most incredible honeymoon to the Maldives. Every detail was perfect &mdash; from the overwater villa to the sunset cruise. We didn't have to worry about a thing!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #0ea5e9, #0369a1);">SR</div>
+                        <div>
+                            <strong>Sarah & Ryan M.</strong>
+                            <span>Maldives Honeymoon</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"I was skeptical about using a travel agency, but QuickChoice Travels saved us over $2,000 on flights and hotels for our family trip to Japan. The personalized itinerary was amazing!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #38bdf8, #0284c7);">JK</div>
+                        <div>
+                            <strong>James K.</strong>
+                            <span>Family Trip to Japan</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"As a solo traveler, I appreciated how QuickChoice Travels tailored everything to my interests. The local guides they connected me with in Greece made the trip truly unforgettable."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background: linear-gradient(135deg, #7dd3fc, #0ea5e9);">AP</div>
+                        <div>
+                            <strong>Aisha P.</strong>
+                            <span>Solo Trip to Greece</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2>Have Questions? <span class="text-gradient">We're Here to Help.</span></h2>
+                    <p>Reach out to our travel experts anytime. We'd love to help you plan your next adventure.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">&#128231;</span>
+                            <div>
+                                <strong>Email Us</strong>
+                                <a href="mailto:hello@quickchoicetravels.com">hello@quickchoicetravels.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">&#128222;</span>
+                            <div>
+                                <strong>Call Us</strong>
+                                <a href="tel:+18005551234">1-800-555-1234</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">&#128205;</span>
+                            <div>
+                                <strong>Visit Us</strong>
+                                <span>123 Travel Boulevard, Suite 200<br>New York, NY 10001</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">&#128339;</span>
+                            <div>
+                                <strong>Office Hours</strong>
+                                <span>Mon&ndash;Fri: 9am&ndash;7pm EST<br>Sat: 10am&ndash;4pm EST</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="map-placeholder">
+                        <span>&#127758;</span>
+                        <p>Serving travelers worldwide from New York City</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Your Dream Vacation Is Just One Step Away</h2>
+                <p>Submit your travel request today and let our experts handle the rest. No commitment, no hassle.</p>
+                <a href="#booking" class="btn btn-white btn-lg">Plan My Trip Now &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo logo-footer">
+                        <span class="logo-icon">&#9992;</span> QuickChoice Travels
+                    </a>
+                    <p>Crafting unforgettable travel experiences since 2010. Your adventure starts here.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#destinations">Destinations</a>
+                    <a href="#why-us">Why Us</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#booking">Plan a Trip</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Popular Trips</h4>
+                    <a href="#booking">European Getaways</a>
+                    <a href="#booking">Asian Adventures</a>
+                    <a href="#booking">Beach Vacations</a>
+                    <a href="#booking">Honeymoon Packages</a>
+                    <a href="#booking">Family Trips</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter / X</a>
+                    <a href="#">YouTube</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 QuickChoice Travels. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
