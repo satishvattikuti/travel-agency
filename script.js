@@ -42,13 +42,14 @@ function initMobileMenu() {
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
+            const href = anchor.getAttribute('href');
+            if (!href || href === '#') return;
+            const target = document.querySelector(href);
+            if (!target) return;
             e.preventDefault();
-            const target = document.querySelector(anchor.getAttribute('href'));
-            if (target) {
-                const offset = 80;
-                const top = target.getBoundingClientRect().top + window.scrollY - offset;
-                window.scrollTo({ top, behavior: 'smooth' });
-            }
+            const offset = 80;
+            const top = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
         });
     });
 }
@@ -251,26 +252,34 @@ Additional Notes
 ${data.notes || 'None'}
     `.trim();
 
-    const response = await fetch(FORMSPREE_URL, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-        },
-        body: JSON.stringify({
-            email: data.email,
-            phone: data.phone,
-            _subject: `New Travel Request: ${data.departureCity} → ${data.destination}`,
-            message: message,
-        }),
-    });
-
-    if (!response.ok) {
-        // If Formspree isn't configured yet, still show success for demo purposes
-        console.warn('Formspree not configured. In production, replace YOUR_FORM_ID in script.js');
-        // For demo/development: simulate success
+    // Skip actual request if Formspree not configured (demo mode)
+    if (FORMSPREE_URL.includes('YOUR_FORM_ID')) {
+        console.warn('Formspree not configured. Replace YOUR_FORM_ID in script.js for production.');
         return;
     }
 
-    return response.json();
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 10000);
+
+    try {
+        const response = await fetch(FORMSPREE_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
+            body: JSON.stringify({
+                email: data.email,
+                phone: data.phone,
+                _subject: `New Travel Request: ${data.departureCity} → ${data.destination}`,
+                message: message,
+            }),
+            signal: controller.signal,
+        });
+
+        if (!response.ok) throw new Error(`Server error: ${response.status}`);
+        return response.json();
+    } finally {
+        clearTimeout(timeout);
+    }
 }

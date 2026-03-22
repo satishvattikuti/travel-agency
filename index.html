@@ -7,14 +7,35 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <span class="logo-icon">&#9992;</span> QuickChoice Travels
+                <div class="logo-mark">
+                    <svg class="logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                        <path d="M20 4C20 4 20 20 20 20" stroke="currentColor" stroke-width="1.5" opacity="0.2"/>
+                        <path d="M4 20C4 20 20 20 20 20" stroke="currentColor" stroke-width="1.5" opacity="0.2"/>
+                        <ellipse cx="20" cy="20" rx="10" ry="18" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                        <path d="M8 12h24M6 20h28M8 28h24" stroke="currentColor" stroke-width="1" opacity="0.15"/>
+                        <path d="M12 6 L20 20 L10 32" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <path d="M10 18 L28 10 L22 20 L30 18" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <circle cx="28" cy="10" r="2" fill="#ff8c61"/>
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                                <stop offset="0%" stop-color="#ff8c61"/>
+                                <stop offset="100%" stop-color="#ff6b35"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">QuickChoice</span>
+                    <span class="logo-tagline">TRAVELS</span>
+                </div>
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#destinations">Destinations</a></li>
@@ -35,7 +56,7 @@
             <div class="hero-gradient"></div>
         </div>
         <div class="container hero-content">
-            <span class="hero-badge">Award-Winning Travel Agency</span>
+            <span class="hero-badge">Your Travel, Personalized</span>
             <h1>Discover the World<br><span class="hero-accent">One Adventure at a Time</span></h1>
             <p class="hero-subtitle">From pristine beaches to bustling cities, we craft personalized travel experiences that create memories lasting a lifetime.</p>
             <div class="hero-actions">
@@ -71,67 +92,72 @@
                 <h2>Where Will Your Next <span class="text-gradient">Adventure</span> Take You?</h2>
                 <p>Explore our most sought-after destinations, handpicked for unforgettable experiences.</p>
             </div>
-            <div class="destinations-grid">
-                <div class="destination-card destination-large">
-                    <div class="destination-img" style="background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);">
-                        <div class="destination-emoji">&#127470;&#127481;</div>
-                    </div>
-                    <div class="destination-overlay">
-                        <span class="destination-tag">Trending</span>
-                        <h3>Santorini, Greece</h3>
-                        <p>Crystal-clear waters & white-washed villages</p>
-                        <span class="destination-price">From $1,299</span>
-                    </div>
-                </div>
+            <div class="destinations-grid destinations-grid-8">
                 <div class="destination-card">
-                    <div class="destination-img" style="background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);">
-                        <div class="destination-emoji">&#127471;&#127477;</div>
-                    </div>
+                    <img class="destination-img" src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&h=400&fit=crop" alt="New York City skyline" loading="lazy">
                     <div class="destination-overlay">
                         <span class="destination-tag">Popular</span>
-                        <h3>Tokyo, Japan</h3>
-                        <p>Ancient temples & modern marvels</p>
-                        <span class="destination-price">From $1,599</span>
+                        <h3>New York City</h3>
+                        <p>The city that never sleeps</p>
+                        <span class="destination-price">From $299</span>
                     </div>
                 </div>
                 <div class="destination-card">
-                    <div class="destination-img" style="background: linear-gradient(135deg, #7dd3fc 0%, #0ea5e9 100%);">
-                        <div class="destination-emoji">&#127474;&#127483;</div>
-                    </div>
+                    <img class="destination-img" src="https://images.unsplash.com/photo-1545194445-dddb8f4487c6?w=600&h=400&fit=crop" alt="Dallas Texas skyline" loading="lazy">
                     <div class="destination-overlay">
-                        <h3>Maldives</h3>
-                        <p>Paradise on Earth</p>
-                        <span class="destination-price">From $2,199</span>
+                        <h3>Dallas, TX</h3>
+                        <p>Big city charm & southern hospitality</p>
+                        <span class="destination-price">From $249</span>
                     </div>
                 </div>
                 <div class="destination-card">
-                    <div class="destination-img" style="background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);">
-                        <div class="destination-emoji">&#127467;&#127479;</div>
+                    <img class="destination-img" src="https://images.unsplash.com/photo-1468818461702-0209ca71a33a?w=600&h=400&fit=crop" alt="Detroit Michigan skyline" loading="lazy">
+                    <div class="destination-overlay">
+                        <h3>Detroit, MI</h3>
+                        <p>Motor City revival & culture</p>
+                        <span class="destination-price">From $199</span>
                     </div>
+                </div>
+                <div class="destination-card">
+                    <img class="destination-img" src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=600&h=400&fit=crop" alt="Atlanta Georgia skyline" loading="lazy">
+                    <div class="destination-overlay">
+                        <span class="destination-tag">Trending</span>
+                        <h3>Atlanta, GA</h3>
+                        <p>Southern culture & vibrant nightlife</p>
+                        <span class="destination-price">From $229</span>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img class="destination-img" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=400&fit=crop" alt="Dubai skyline with Burj Khalifa" loading="lazy">
+                    <div class="destination-overlay">
+                        <span class="destination-tag">Luxury</span>
+                        <h3>Dubai, UAE</h3>
+                        <p>Luxury shopping & desert adventures</p>
+                        <span class="destination-price">From $1,399</span>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img class="destination-img" src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&h=400&fit=crop" alt="London Big Ben and Thames" loading="lazy">
+                    <div class="destination-overlay">
+                        <h3>London, UK</h3>
+                        <p>Royal heritage & vibrant culture</p>
+                        <span class="destination-price">From $899</span>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img class="destination-img" src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&h=400&fit=crop" alt="Taj Mahal India" loading="lazy">
+                    <div class="destination-overlay">
+                        <h3>India</h3>
+                        <p>Ancient wonders & rich traditions</p>
+                        <span class="destination-price">From $799</span>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img class="destination-img" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&h=400&fit=crop" alt="Paris Eiffel Tower" loading="lazy">
                     <div class="destination-overlay">
                         <h3>Paris, France</h3>
                         <p>The City of Lights & Love</p>
                         <span class="destination-price">From $999</span>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <div class="destination-img" style="background: linear-gradient(135deg, #bae6fd 0%, #0ea5e9 100%);">
-                        <div class="destination-emoji">&#127462;&#127482;</div>
-                    </div>
-                    <div class="destination-overlay">
-                        <h3>Bali, Indonesia</h3>
-                        <p>Tropical bliss & spiritual retreat</p>
-                        <span class="destination-price">From $1,099</span>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <div class="destination-img" style="background: linear-gradient(135deg, #e0f2fe 0%, #38bdf8 100%);">
-                        <div class="destination-emoji">&#127466;&#127468;</div>
-                    </div>
-                    <div class="destination-overlay">
-                        <h3>Dubai, UAE</h3>
-                        <p>Luxury & desert adventures</p>
-                        <span class="destination-price">From $1,399</span>
                     </div>
                 </div>
             </div>
@@ -151,32 +177,27 @@
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #0ea5e9, #0369a1);">&#128176;</div>
+                    <div class="feature-icon" style="background: #fff3e6; color: #e85d2a;">&#128176;</div>
                     <h3>Best Price Guarantee</h3>
                     <p>We negotiate exclusive deals with airlines and hotels to get you the best rates, every time.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #38bdf8, #0284c7);">&#127758;</div>
+                    <div class="feature-icon" style="background: #e8f4fd; color: #2563eb;">&#127758;</div>
                     <h3>Expert Travel Advisors</h3>
                     <p>Our team has traveled to 100+ countries. We give advice based on real, personal experience.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #7dd3fc, #0ea5e9);">&#128222;</div>
+                    <div class="feature-icon" style="background: #ecfdf5; color: #059669;">&#128222;</div>
                     <h3>24/7 Support</h3>
                     <p>From departure to return, our support team is always just a call or message away.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #bae6fd, #38bdf8);">&#9989;</div>
+                    <div class="feature-icon" style="background: #fef3c7; color: #d97706;">&#9989;</div>
                     <h3>Hassle-Free Booking</h3>
                     <p>Submit your travel request and we take care of flights, hotels, transfers, and more.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #0284c7, #38bdf8);">&#128737;</div>
-                    <h3>Travel Insurance</h3>
-                    <p>We partner with top insurers to protect your trip against unexpected cancellations or delays.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #e0f2fe, #7dd3fc);">&#127873;</div>
+                    <div class="feature-icon" style="background: #ffe4e6; color: #be123c;">&#127873;</div>
                     <h3>Personalized Packages</h3>
                     <p>No cookie-cutter trips. Every itinerary is custom-built around your preferences and budget.</p>
                 </div>
@@ -327,7 +348,7 @@
                     <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                     <p class="testimonial-text">"QuickChoice Travels planned the most incredible honeymoon to the Maldives. Every detail was perfect &mdash; from the overwater villa to the sunset cruise. We didn't have to worry about a thing!"</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar" style="background: linear-gradient(135deg, #0ea5e9, #0369a1);">SR</div>
+                        <div class="author-avatar" style="background: #ff6b35;">SR</div>
                         <div>
                             <strong>Sarah & Ryan M.</strong>
                             <span>Maldives Honeymoon</span>
@@ -338,7 +359,7 @@
                     <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                     <p class="testimonial-text">"I was skeptical about using a travel agency, but QuickChoice Travels saved us over $2,000 on flights and hotels for our family trip to Japan. The personalized itinerary was amazing!"</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar" style="background: linear-gradient(135deg, #38bdf8, #0284c7);">JK</div>
+                        <div class="author-avatar" style="background: #2563eb;">JK</div>
                         <div>
                             <strong>James K.</strong>
                             <span>Family Trip to Japan</span>
@@ -349,7 +370,7 @@
                     <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                     <p class="testimonial-text">"As a solo traveler, I appreciated how QuickChoice Travels tailored everything to my interests. The local guides they connected me with in Greece made the trip truly unforgettable."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar" style="background: linear-gradient(135deg, #7dd3fc, #0ea5e9);">AP</div>
+                        <div class="author-avatar" style="background: #059669;">AP</div>
                         <div>
                             <strong>Aisha P.</strong>
                             <span>Solo Trip to Greece</span>
@@ -370,28 +391,28 @@
                     <p>Reach out to our travel experts anytime. We'd love to help you plan your next adventure.</p>
                     <div class="contact-details">
                         <div class="contact-item">
-                            <span class="contact-icon">&#128231;</span>
+                            <span class="contact-icon" aria-hidden="true">&#128231;</span>
                             <div>
                                 <strong>Email Us</strong>
-                                <a href="mailto:hello@quickchoicetravels.com">hello@quickchoicetravels.com</a>
+                                <a href="mailto:Radhabandar@gmail.com">Radhabandar@gmail.com</a>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-icon">&#128222;</span>
+                            <span class="contact-icon" aria-hidden="true">&#128222;</span>
                             <div>
                                 <strong>Call Us</strong>
                                 <a href="tel:+18005551234">1-800-555-1234</a>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-icon">&#128205;</span>
+                            <span class="contact-icon" aria-hidden="true">&#128205;</span>
                             <div>
                                 <strong>Visit Us</strong>
-                                <span>123 Travel Boulevard, Suite 200<br>New York, NY 10001</span>
+                                <span>10581 N MacArthur Blvd # 2176<br>Irving, TX 75063</span>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-icon">&#128339;</span>
+                            <span class="contact-icon" aria-hidden="true">&#128339;</span>
                             <div>
                                 <strong>Office Hours</strong>
                                 <span>Mon&ndash;Fri: 9am&ndash;7pm EST<br>Sat: 10am&ndash;4pm EST</span>
@@ -402,7 +423,7 @@
                 <div class="contact-map">
                     <div class="map-placeholder">
                         <span>&#127758;</span>
-                        <p>Serving travelers worldwide from New York City</p>
+                        <p>Serving travelers worldwide from Irving, TX</p>
                     </div>
                 </div>
             </div>
@@ -426,7 +447,26 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="#" class="logo logo-footer">
-                        <span class="logo-icon">&#9992;</span> QuickChoice Travels
+                        <div class="logo-mark">
+                            <svg class="logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                                <ellipse cx="20" cy="20" rx="10" ry="18" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                                <path d="M8 12h24M6 20h28M8 28h24" stroke="currentColor" stroke-width="1" opacity="0.15"/>
+                                <path d="M12 6 L20 20 L10 32" stroke="url(#logoGradF)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                <path d="M10 18 L28 10 L22 20 L30 18" stroke="url(#logoGradF)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                <circle cx="28" cy="10" r="2" fill="#ff8c61"/>
+                                <defs>
+                                    <linearGradient id="logoGradF" x1="0" y1="0" x2="40" y2="40">
+                                        <stop offset="0%" stop-color="#ff8c61"/>
+                                        <stop offset="100%" stop-color="#ff6b35"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-name">QuickChoice</span>
+                            <span class="logo-tagline">TRAVELS</span>
+                        </div>
                     </a>
                     <p>Crafting unforgettable travel experiences since 2010. Your adventure starts here.</p>
                 </div>
@@ -445,13 +485,6 @@
                     <a href="#booking">Beach Vacations</a>
                     <a href="#booking">Honeymoon Packages</a>
                     <a href="#booking">Family Trips</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Connect</h4>
-                    <a href="#">Facebook</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Twitter / X</a>
-                    <a href="#">YouTube</a>
                 </div>
             </div>
             <div class="footer-bottom">
