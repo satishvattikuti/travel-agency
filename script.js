@@ -227,11 +227,13 @@ function collectFormData() {
 // Replace YOUR_FORM_ID with your actual Formspree form ID.
 // Sign up free at https://formspree.io
 async function sendEmail(data) {
-    const FORMSPREE_URL = 'https://formspree.io/f/YOUR_FORM_ID';
+    const FORMSPREE_URL = 'https://formspree.io/f/mjgaqwqv';
 
-    // Format a readable message
-    const message = `
-New Travel Request
+    const message = `Hello Radha,
+
+Here are the quote request details:
+
+Travel Details
 ==================
 Departure City: ${data.departureCity}
 Destination: ${data.destination}
@@ -249,14 +251,7 @@ Phone: ${data.phone}
 
 Additional Notes
 ==================
-${data.notes || 'None'}
-    `.trim();
-
-    // Skip actual request if Formspree not configured (demo mode)
-    if (FORMSPREE_URL.includes('YOUR_FORM_ID')) {
-        console.warn('Formspree not configured. Replace YOUR_FORM_ID in script.js for production.');
-        return;
-    }
+${data.notes || 'None'}`;
 
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 10000);
@@ -271,7 +266,7 @@ ${data.notes || 'None'}
             body: JSON.stringify({
                 email: data.email,
                 phone: data.phone,
-                _subject: `New Travel Request: ${data.departureCity} → ${data.destination}`,
+                _subject: 'You have a new quote request',
                 message: message,
             }),
             signal: controller.signal,
