@@ -108,9 +108,14 @@ function initBookingForm() {
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
+        console.log('Form submit intercepted by JS');
 
         // Validate
-        if (!validateForm()) return;
+        if (!validateForm()) {
+            console.log('Form validation failed');
+            return;
+        }
+        console.log('Form validation passed');
 
         // Show loading
         const btnText = submitBtn.querySelector('.btn-text');
