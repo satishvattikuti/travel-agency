@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://satishvattikuti.github.io/travel-agency/sitemap.xml

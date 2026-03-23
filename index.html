@@ -3,16 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickChoice Travels | Your Dream Vacation Awaits</title>
-    <meta name="description" content="QuickChoice Travels - personalized travel planning from Irving, TX. Get custom itineraries, best price guarantees, and 24/7 support for your dream vacation.">
+    <title>QuickChoice Travels | Personalized Travel Planning in Irving, TX</title>
+    <meta name="description" content="QuickChoice Travels offers personalized travel planning from Irving, TX. Custom itineraries, best price guarantees, and 24/7 support for flights, hotels, and vacation packages worldwide.">
+    <meta name="keywords" content="travel agency, Irving TX, custom travel planning, flight booking, vacation packages, honeymoon packages, international travel, QuickChoice Travels">
+    <meta name="author" content="QuickChoice Travels">
+    <link rel="canonical" href="https://satishvattikuti.github.io/travel-agency/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://satishvattikuti.github.io/travel-agency/">
+    <meta property="og:title" content="QuickChoice Travels | Personalized Travel Planning">
+    <meta property="og:description" content="Custom itineraries, best price guarantees, and 24/7 support. Plan your dream vacation with QuickChoice Travels in Irving, TX.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&h=630&fit=crop">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="QuickChoice Travels">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="QuickChoice Travels | Personalized Travel Planning">
+    <meta name="twitter:description" content="Custom itineraries, best price guarantees, and 24/7 support. Plan your dream vacation with QuickChoice Travels.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&h=630&fit=crop">
+
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="US-TX">
+    <meta name="geo.placename" content="Irving">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Structured Data: TravelAgency + LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "QuickChoice Travels",
+        "description": "Personalized travel planning with custom itineraries, best price guarantees, and 24/7 support.",
+        "url": "https://satishvattikuti.github.io/travel-agency/",
+        "email": "Radhabandar@gmail.com",
+        "telephone": "+1-800-555-1234",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "10581 N MacArthur Blvd # 2176",
+            "addressLocality": "Irving",
+            "addressRegion": "TX",
+            "postalCode": "75063",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 32.8998,
+            "longitude": -96.9789
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "19:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "16:00"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "10000"
+        },
+        "sameAs": []
+    }
+    </script>
+
+    <!-- Structured Data: Website SearchAction -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "QuickChoice Travels",
+        "url": "https://satishvattikuti.github.io/travel-agency/"
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
         <div class="container nav-container">
             <a href="#" class="logo">
                 <div class="logo-mark">
@@ -86,7 +167,7 @@
     </header>
 
     <!-- Popular Destinations -->
-    <section class="destinations" id="destinations">
+    <section class="destinations" id="destinations" aria-label="Popular destinations">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Popular Destinations</span>
@@ -199,7 +280,7 @@
     </section>
 
     <!-- Lead Capture / Booking Form -->
-    <section class="booking" id="booking">
+    <section class="booking" id="booking" aria-label="Book your trip">
         <div class="container">
             <div class="booking-wrapper">
                 <div class="booking-info">
@@ -427,7 +508,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
+    <section class="testimonials" id="testimonials" aria-label="Customer testimonials">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Testimonials</span>
@@ -473,7 +554,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" aria-label="Contact information">
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info">
@@ -533,7 +614,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
