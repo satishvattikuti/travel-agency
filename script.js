@@ -11,12 +11,20 @@ document.addEventListener('DOMContentLoaded', () => {
     initDateDefaults();
 });
 
-// --- Navbar scroll effect ---
+// --- Navbar scroll effect (throttled with rAF) ---
 function initNavbar() {
     const navbar = document.getElementById('navbar');
+    let ticking = false;
+
     window.addEventListener('scroll', () => {
-        navbar.classList.toggle('scrolled', window.scrollY > 50);
-    });
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                navbar.classList.toggle('scrolled', window.scrollY > 50);
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
 }
 
 // --- Mobile menu ---
@@ -29,7 +37,6 @@ function initMobileMenu() {
         links.classList.toggle('active');
     });
 
-    // Close menu when a link is clicked
     links.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             btn.classList.remove('active');
@@ -56,11 +63,6 @@ function initSmoothScroll() {
 
 // --- Scroll animations ---
 function initScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -68,9 +70,11 @@ function initScrollAnimations() {
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
 
-    // Observe cards and sections
     const animateElements = document.querySelectorAll(
         '.destination-card, .feature-card, .testimonial-card, .contact-item'
     );
@@ -85,12 +89,10 @@ function initDateDefaults() {
     const departDate = document.getElementById('departDate');
     const returnDate = document.getElementById('returnDate');
 
-    // Set min date to today
     const today = new Date().toISOString().split('T')[0];
     departDate.min = today;
     returnDate.min = today;
 
-    // Update return date min when depart date changes
     departDate.addEventListener('change', () => {
         returnDate.min = departDate.value;
         if (returnDate.value && returnDate.value < departDate.value) {
@@ -108,34 +110,22 @@ function initBookingForm() {
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        console.log('Form submit intercepted by JS');
 
-        // Validate
-        if (!validateForm()) {
-            console.log('Form validation failed');
-            return;
-        }
-        console.log('Form validation passed');
+        if (!validateForm()) return;
 
-        // Show loading
         const btnText = submitBtn.querySelector('.btn-text');
         const btnLoading = submitBtn.querySelector('.btn-loading');
         btnText.style.display = 'none';
         btnLoading.style.display = 'inline';
         submitBtn.disabled = true;
 
-        // Collect form data
         const formData = collectFormData();
 
         try {
-            // Send email via EmailJS (or Formspree, etc.)
             await sendEmail(formData);
-
-            // Show success
             form.style.display = 'none';
             formSuccess.style.display = 'block';
         } catch (err) {
-            console.error('Form submission error:', err);
             alert('There was an error submitting your request. Please try again or contact us directly.');
         } finally {
             btnText.style.display = 'inline';
@@ -144,7 +134,6 @@ function initBookingForm() {
         }
     });
 
-    // Reset form
     newRequestBtn.addEventListener('click', () => {
         form.reset();
         form.style.display = 'block';
@@ -159,8 +148,8 @@ function validateForm() {
     clearErrors();
 
     const rules = [
-        { id: 'departureCity', message: 'Please enter your departure city' },
-        { id: 'destination', message: 'Please enter your destination' },
+        { id: 'departureCity', message: 'Please select a departure city' },
+        { id: 'destination', message: 'Please select a destination' },
         { id: 'travelClass', message: 'Please select a travel class' },
         { id: 'travelers', message: 'Please enter number of travelers' },
         { id: 'departDate', message: 'Please select a departure date' },
@@ -172,7 +161,7 @@ function validateForm() {
     rules.forEach(rule => {
         const input = document.getElementById(rule.id);
         const error = document.getElementById(rule.id + 'Error');
-        let value = input.value.trim();
+        const value = input.value.trim();
 
         if (!value) {
             showError(input, error, rule.message);
@@ -183,7 +172,6 @@ function validateForm() {
         }
     });
 
-    // Check return date is after depart date
     const departDate = document.getElementById('departDate').value;
     const returnDate = document.getElementById('returnDate').value;
     if (departDate && returnDate && returnDate < departDate) {
@@ -227,10 +215,7 @@ function collectFormData() {
     };
 }
 
-// --- Send email ---
-// This function uses Formspree for a zero-config email solution.
-// Replace YOUR_FORM_ID with your actual Formspree form ID.
-// Sign up free at https://formspree.io
+// --- Send email via Formspree ---
 async function sendEmail(data) {
     const FORMSPREE_URL = 'https://formspree.io/f/mjgaqwqv';
 

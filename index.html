@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuickChoice Travels | Your Dream Vacation Awaits</title>
+    <meta name="description" content="QuickChoice Travels - personalized travel planning from Irving, TX. Get custom itineraries, best price guarantees, and 24/7 support for your dream vacation.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -99,7 +100,6 @@
                         <span class="destination-tag">Popular</span>
                         <h3>New York City</h3>
                         <p>The city that never sleeps</p>
-                        <span class="destination-price">From $299</span>
                     </div>
                 </div>
                 <div class="destination-card">
@@ -107,7 +107,6 @@
                     <div class="destination-overlay">
                         <h3>Dallas, TX</h3>
                         <p>Big city charm & southern hospitality</p>
-                        <span class="destination-price">From $249</span>
                     </div>
                 </div>
                 <div class="destination-card">
@@ -115,7 +114,6 @@
                     <div class="destination-overlay">
                         <h3>Detroit, MI</h3>
                         <p>Motor City revival & culture</p>
-                        <span class="destination-price">From $199</span>
                     </div>
                 </div>
                 <div class="destination-card">
@@ -124,7 +122,6 @@
                         <span class="destination-tag">Trending</span>
                         <h3>Atlanta, GA</h3>
                         <p>Southern culture & vibrant nightlife</p>
-                        <span class="destination-price">From $229</span>
                     </div>
                 </div>
                 <div class="destination-card">
@@ -133,7 +130,6 @@
                         <span class="destination-tag">Luxury</span>
                         <h3>Dubai, UAE</h3>
                         <p>Luxury shopping & desert adventures</p>
-                        <span class="destination-price">From $1,399</span>
                     </div>
                 </div>
                 <div class="destination-card">
@@ -141,7 +137,6 @@
                     <div class="destination-overlay">
                         <h3>London, UK</h3>
                         <p>Royal heritage & vibrant culture</p>
-                        <span class="destination-price">From $899</span>
                     </div>
                 </div>
                 <div class="destination-card">
@@ -149,7 +144,6 @@
                     <div class="destination-overlay">
                         <h3>India</h3>
                         <p>Ancient wonders & rich traditions</p>
-                        <span class="destination-price">From $799</span>
                     </div>
                 </div>
                 <div class="destination-card">
@@ -157,7 +151,6 @@
                     <div class="destination-overlay">
                         <h3>Paris, France</h3>
                         <p>The City of Lights & Love</p>
-                        <span class="destination-price">From $999</span>
                     </div>
                 </div>
             </div>
@@ -241,12 +234,108 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="departureCity">Departure City *</label>
-                                <input type="text" id="departureCity" name="departureCity" placeholder="e.g., New York" required>
+                                <select id="departureCity" name="departureCity" required>
+                                    <option value="">Select departure airport</option>
+                                    <optgroup label="US Domestic">
+                                        <option value="ATL - Atlanta">ATL - Atlanta (Hartsfield-Jackson)</option>
+                                        <option value="BOS - Boston">BOS - Boston (Logan)</option>
+                                        <option value="CLT - Charlotte">CLT - Charlotte (Douglas)</option>
+                                        <option value="DEN - Denver">DEN - Denver (International)</option>
+                                        <option value="DFW - Dallas/Fort Worth">DFW - Dallas/Fort Worth (International)</option>
+                                        <option value="DTW - Detroit">DTW - Detroit (Metro Wayne County)</option>
+                                        <option value="EWR - Newark">EWR - Newark (Liberty)</option>
+                                        <option value="IAD - Washington DC">IAD - Washington DC (Dulles)</option>
+                                        <option value="IAH - Houston">IAH - Houston (George Bush)</option>
+                                        <option value="JFK - New York">JFK - New York (John F. Kennedy)</option>
+                                        <option value="LAS - Las Vegas">LAS - Las Vegas (Harry Reid)</option>
+                                        <option value="LAX - Los Angeles">LAX - Los Angeles (International)</option>
+                                        <option value="MCO - Orlando">MCO - Orlando (International)</option>
+                                        <option value="MIA - Miami">MIA - Miami (International)</option>
+                                        <option value="MSP - Minneapolis">MSP - Minneapolis (St. Paul)</option>
+                                        <option value="ORD - Chicago">ORD - Chicago (O'Hare)</option>
+                                        <option value="PHL - Philadelphia">PHL - Philadelphia (International)</option>
+                                        <option value="PHX - Phoenix">PHX - Phoenix (Sky Harbor)</option>
+                                        <option value="SEA - Seattle">SEA - Seattle (Sea-Tac)</option>
+                                        <option value="SFO - San Francisco">SFO - San Francisco (International)</option>
+                                    </optgroup>
+                                    <optgroup label="International">
+                                        <option value="AMS - Amsterdam">AMS - Amsterdam (Schiphol)</option>
+                                        <option value="BKK - Bangkok">BKK - Bangkok (Suvarnabhumi)</option>
+                                        <option value="BLR - Bengaluru">BLR - Bengaluru (Kempegowda)</option>
+                                        <option value="BOM - Mumbai">BOM - Mumbai (Chhatrapati Shivaji)</option>
+                                        <option value="CDG - Paris">CDG - Paris (Charles de Gaulle)</option>
+                                        <option value="DEL - New Delhi">DEL - New Delhi (Indira Gandhi)</option>
+                                        <option value="HYD - Hyderabad">HYD - Hyderabad (Rajiv Gandhi)</option>
+                                        <option value="DOH - Doha">DOH - Doha (Hamad)</option>
+                                        <option value="DXB - Dubai">DXB - Dubai (International)</option>
+                                        <option value="FCO - Rome">FCO - Rome (Fiumicino)</option>
+                                        <option value="FRA - Frankfurt">FRA - Frankfurt (International)</option>
+                                        <option value="GRU - Sao Paulo">GRU - Sao Paulo (Guarulhos)</option>
+                                        <option value="HKG - Hong Kong">HKG - Hong Kong (International)</option>
+                                        <option value="HND - Tokyo">HND - Tokyo (Haneda)</option>
+                                        <option value="ICN - Seoul">ICN - Seoul (Incheon)</option>
+                                        <option value="IST - Istanbul">IST - Istanbul (International)</option>
+                                        <option value="LHR - London">LHR - London (Heathrow)</option>
+                                        <option value="MAD - Madrid">MAD - Madrid (Barajas)</option>
+                                        <option value="MEX - Mexico City">MEX - Mexico City (Benito Juarez)</option>
+                                        <option value="SIN - Singapore">SIN - Singapore (Changi)</option>
+                                        <option value="SYD - Sydney">SYD - Sydney (Kingsford Smith)</option>
+                                        <option value="YYZ - Toronto">YYZ - Toronto (Pearson)</option>
+                                    </optgroup>
+                                </select>
                                 <span class="form-error" id="departureCityError"></span>
                             </div>
                             <div class="form-group">
                                 <label for="destination">Destination *</label>
-                                <input type="text" id="destination" name="destination" placeholder="e.g., Paris, France" required>
+                                <select id="destination" name="destination" required>
+                                    <option value="">Select destination airport</option>
+                                    <optgroup label="US Domestic">
+                                        <option value="ATL - Atlanta">ATL - Atlanta (Hartsfield-Jackson)</option>
+                                        <option value="BOS - Boston">BOS - Boston (Logan)</option>
+                                        <option value="CLT - Charlotte">CLT - Charlotte (Douglas)</option>
+                                        <option value="DEN - Denver">DEN - Denver (International)</option>
+                                        <option value="DFW - Dallas/Fort Worth">DFW - Dallas/Fort Worth (International)</option>
+                                        <option value="DTW - Detroit">DTW - Detroit (Metro Wayne County)</option>
+                                        <option value="EWR - Newark">EWR - Newark (Liberty)</option>
+                                        <option value="IAD - Washington DC">IAD - Washington DC (Dulles)</option>
+                                        <option value="IAH - Houston">IAH - Houston (George Bush)</option>
+                                        <option value="JFK - New York">JFK - New York (John F. Kennedy)</option>
+                                        <option value="LAS - Las Vegas">LAS - Las Vegas (Harry Reid)</option>
+                                        <option value="LAX - Los Angeles">LAX - Los Angeles (International)</option>
+                                        <option value="MCO - Orlando">MCO - Orlando (International)</option>
+                                        <option value="MIA - Miami">MIA - Miami (International)</option>
+                                        <option value="MSP - Minneapolis">MSP - Minneapolis (St. Paul)</option>
+                                        <option value="ORD - Chicago">ORD - Chicago (O'Hare)</option>
+                                        <option value="PHL - Philadelphia">PHL - Philadelphia (International)</option>
+                                        <option value="PHX - Phoenix">PHX - Phoenix (Sky Harbor)</option>
+                                        <option value="SEA - Seattle">SEA - Seattle (Sea-Tac)</option>
+                                        <option value="SFO - San Francisco">SFO - San Francisco (International)</option>
+                                    </optgroup>
+                                    <optgroup label="International">
+                                        <option value="AMS - Amsterdam">AMS - Amsterdam (Schiphol)</option>
+                                        <option value="BKK - Bangkok">BKK - Bangkok (Suvarnabhumi)</option>
+                                        <option value="BLR - Bengaluru">BLR - Bengaluru (Kempegowda)</option>
+                                        <option value="BOM - Mumbai">BOM - Mumbai (Chhatrapati Shivaji)</option>
+                                        <option value="CDG - Paris">CDG - Paris (Charles de Gaulle)</option>
+                                        <option value="DEL - New Delhi">DEL - New Delhi (Indira Gandhi)</option>
+                                        <option value="HYD - Hyderabad">HYD - Hyderabad (Rajiv Gandhi)</option>
+                                        <option value="DOH - Doha">DOH - Doha (Hamad)</option>
+                                        <option value="DXB - Dubai">DXB - Dubai (International)</option>
+                                        <option value="FCO - Rome">FCO - Rome (Fiumicino)</option>
+                                        <option value="FRA - Frankfurt">FRA - Frankfurt (International)</option>
+                                        <option value="GRU - Sao Paulo">GRU - Sao Paulo (Guarulhos)</option>
+                                        <option value="HKG - Hong Kong">HKG - Hong Kong (International)</option>
+                                        <option value="HND - Tokyo">HND - Tokyo (Haneda)</option>
+                                        <option value="ICN - Seoul">ICN - Seoul (Incheon)</option>
+                                        <option value="IST - Istanbul">IST - Istanbul (International)</option>
+                                        <option value="LHR - London">LHR - London (Heathrow)</option>
+                                        <option value="MAD - Madrid">MAD - Madrid (Barajas)</option>
+                                        <option value="MEX - Mexico City">MEX - Mexico City (Benito Juarez)</option>
+                                        <option value="SIN - Singapore">SIN - Singapore (Changi)</option>
+                                        <option value="SYD - Sydney">SYD - Sydney (Kingsford Smith)</option>
+                                        <option value="YYZ - Toronto">YYZ - Toronto (Pearson)</option>
+                                    </optgroup>
+                                </select>
                                 <span class="form-error" id="destinationError"></span>
                             </div>
                         </div>
