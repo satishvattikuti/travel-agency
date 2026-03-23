@@ -40,7 +40,6 @@
 }
 
 html {
-    scroll-behavior: smooth;
     font-size: 16px;
 }
 
@@ -204,13 +203,10 @@ h3 { font-size: 1.3rem; font-weight: 600; }
     z-index: 1000;
     padding: 16px 0;
     transition: background 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
-    will-change: background, padding;
 }
 
 .navbar.scrolled {
-    background: rgba(17, 24, 39, 0.97);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(17, 24, 39, 0.98);
     padding: 10px 0;
     box-shadow: 0 1px 0 rgba(255,255,255,0.05);
 }
@@ -347,8 +343,6 @@ h3 { font-size: 1.3rem; font-weight: 600; }
     height: 80%;
     background: radial-gradient(circle, rgba(255,107,53,0.1) 0%, transparent 60%);
     animation: float 8s ease-in-out infinite;
-    will-change: transform;
-    contain: layout style;
 }
 
 .hero-bg::after {
@@ -360,8 +354,6 @@ h3 { font-size: 1.3rem; font-weight: 600; }
     height: 60%;
     background: radial-gradient(circle, rgba(30,58,95,0.3) 0%, transparent 60%);
     animation: float 10s ease-in-out infinite reverse;
-    will-change: transform;
-    contain: layout style;
 }
 
 @keyframes float {
@@ -500,10 +492,9 @@ h3 { font-size: 1.3rem; font-weight: 600; }
     cursor: pointer;
     min-height: 280px;
     box-shadow: var(--shadow-card);
-    transform: translateY(0) translateZ(0);
+    transform: translateY(0);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
     z-index: 1;
-    will-change: transform;
 }
 
 .destination-card:hover {
