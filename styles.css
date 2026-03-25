@@ -122,14 +122,15 @@ h3 { font-size: 1.3rem; font-weight: 600; }
 }
 
 .btn-outline {
-    background: transparent;
-    color: var(--white);
-    border: 2px solid rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.08);
+    color: #ffffff;
+    border: 2px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(4px);
 }
 
 .btn-outline:hover {
-    background: rgba(255,255,255,0.1);
-    border-color: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.8);
 }
 
 .btn-white {
@@ -331,43 +332,30 @@ h3 { font-size: 1.3rem; font-weight: 600; }
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: var(--gradient-hero);
 }
 
-.hero-bg::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -30%;
-    width: 80%;
-    height: 80%;
-    background: radial-gradient(circle, rgba(255,107,53,0.1) 0%, transparent 60%);
-    animation: float 8s ease-in-out infinite;
-}
-
-.hero-bg::after {
-    content: '';
-    position: absolute;
-    bottom: -30%;
-    left: -20%;
-    width: 60%;
-    height: 60%;
-    background: radial-gradient(circle, rgba(30,58,95,0.3) 0%, transparent 60%);
-    animation: float 10s ease-in-out infinite reverse;
-}
-
-@keyframes float {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(30px, -30px); }
-}
-
-.hero-gradient {
+/* Hero video background */
+.hero-video {
     position: absolute;
     inset: 0;
-    background:
-        radial-gradient(ellipse at 20% 50%, rgba(255, 107, 53, 0.06) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(30, 58, 95, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 80%, rgba(17, 24, 39, 0.3) 0%, transparent 50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(11, 15, 25, 0.6) 0%,
+        rgba(11, 15, 25, 0.35) 40%,
+        rgba(11, 15, 25, 0.5) 100%
+    );
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-video { display: none; }
 }
 
 .hero-content {
@@ -379,34 +367,39 @@ h3 { font-size: 1.3rem; font-weight: 600; }
 .hero-badge {
     display: inline-block;
     padding: 8px 20px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
     border-radius: var(--radius-sm);
-    color: rgba(255,255,255,0.9);
-    font-size: 0.82rem;
-    font-weight: 500;
+    color: #ffffff;
+    font-size: 0.84rem;
+    font-weight: 600;
     margin-bottom: 24px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .hero h1 {
-    color: var(--white);
+    color: #ffffff;
     margin-bottom: 20px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
 .hero-accent {
-    background: linear-gradient(135deg, #ffd6c4, #ff8c61, #ff6b35);
+    background: linear-gradient(135deg, #ffffff, #ffd6c4, #ffb088);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
 
 .hero-subtitle {
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.85);
     font-size: clamp(1rem, 2vw, 1.15rem);
     max-width: 520px;
     margin-bottom: 36px;
     line-height: 1.7;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
 .hero-actions {
@@ -427,15 +420,17 @@ h3 { font-size: 1.3rem; font-weight: 600; }
 }
 
 .stat-number {
-    color: var(--white);
+    color: #ffffff;
     font-size: 2rem;
     font-weight: 800;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
 .stat-label {
-    color: rgba(255,255,255,0.45);
+    color: rgba(255,255,255,0.75);
     font-size: 0.82rem;
     font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .hero-scroll-indicator {
@@ -448,15 +443,16 @@ h3 { font-size: 1.3rem; font-weight: 600; }
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    color: rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.6);
     font-size: 0.8rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 .scroll-arrow {
     width: 20px;
     height: 20px;
-    border-right: 2px solid rgba(255,255,255,0.3);
-    border-bottom: 2px solid rgba(255,255,255,0.3);
+    border-right: 2px solid rgba(255,255,255,0.6);
+    border-bottom: 2px solid rgba(255,255,255,0.6);
     transform: rotate(45deg);
     animation: scrollBounce 2s ease-in-out infinite;
 }
@@ -678,6 +674,8 @@ h3 { font-size: 1.3rem; font-weight: 600; }
     border-radius: var(--radius-xl);
     padding: 36px;
     box-shadow: var(--shadow-xl);
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .form-title {
@@ -735,6 +733,8 @@ h3 { font-size: 1.3rem; font-weight: 600; }
     transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
     outline: none;
     line-height: 1.5;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .form-group input::placeholder,
@@ -1135,8 +1135,37 @@ h3 { font-size: 1.3rem; font-weight: 600; }
         transform: rotate(-45deg) translate(5px, -5px);
     }
 
+    .hero-content {
+        padding: 100px 16px 60px;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.6rem, 5vw, 2.8rem);
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
     .hero-stats {
-        gap: 28px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .hero-scroll-indicator {
+        display: none;
     }
 
     .destinations-grid,
@@ -1162,7 +1191,14 @@ h3 { font-size: 1.3rem; font-weight: 600; }
     }
 
     .booking-form-container {
-        padding: 24px 18px;
+        padding: 20px 14px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px 12px;
+        font-size: 0.95rem;
     }
 
     .footer-grid {
@@ -1172,23 +1208,8 @@ h3 { font-size: 1.3rem; font-weight: 600; }
 }
 
 @media (max-width: 480px) {
-    .hero-actions {
-        flex-direction: column;
-    }
-
-    .hero-actions .btn {
-        width: 100%;
-    }
-
-    .hero-stats {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .stat {
-        flex-direction: row;
-        align-items: center;
-        gap: 12px;
+    .hero h1 {
+        font-size: 1.5rem;
     }
 
     .stat-number {
