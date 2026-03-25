@@ -604,7 +604,6 @@ h3 { font-size: 1.3rem; font-weight: 600; }
     padding: 100px 0;
     background: var(--gradient-hero);
     position: relative;
-    overflow: hidden;
 }
 
 .booking::before {
@@ -676,6 +675,8 @@ h3 { font-size: 1.3rem; font-weight: 600; }
     box-shadow: var(--shadow-xl);
     max-width: 100%;
     box-sizing: border-box;
+    position: relative;
+    z-index: 10;
 }
 
 .form-title {
@@ -727,7 +728,7 @@ h3 { font-size: 1.3rem; font-weight: 600; }
     border: 1.5px solid var(--gray-300);
     border-radius: var(--radius-md);
     font-family: inherit;
-    font-size: 1rem;
+    font-size: 16px;
     color: var(--gray-900);
     background: var(--gray-50);
     transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
@@ -770,12 +771,22 @@ h3 { font-size: 1.3rem; font-weight: 600; }
 }
 
 .form-group select {
-    appearance: none;
     cursor: pointer;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%236b7280' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 16px center;
     padding-right: 40px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Custom arrow only on desktop — keep native appearance on mobile/tablet */
+@media (min-width: 769px) {
+    .form-group select {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%236b7280' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+    }
 }
 
 .form-disclaimer {
